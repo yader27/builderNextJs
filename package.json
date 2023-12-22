@@ -1,5 +1,5 @@
 {
-  "name": "builder-app",
+  "name": "yes-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,22 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@builder.io/dev-tools": "^0.1.24",
+    "@builder.io/dev-tools": "^0.1.17",
     "@builder.io/react": "^3.0.14",
     "@builder.io/sdk": "^2.0.8",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@types/node": "20.6.2",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "axios": "^1.6.1",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "lottie-web": "^5.12.2",
+    "next": "13.4.19",
+    "nodemailer": "^6.9.7",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pg": "^8.11.3",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-alice-carousel": "^2.8.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
+    "@types/nodemailer-sendgrid": "^1.0.0",
+    "@types/pg": "^8.10.9"
   }
 }

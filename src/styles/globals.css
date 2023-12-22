@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -16,12 +18,48 @@
   }
 }
 
-/* body {
+/* * {
+  font-family: "Baloo", sans-serif;
+} */
+
+body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-} */
+    rgb(var(--background-start-rgb)); */
+}
+
+.font-baloo {
+  font-family: "Baloo", sans-serif;
+}
+
+  .shadow-solid-green {
+    box-shadow: 4px 7px 0px -3px #C7FDD0;
+  -webkit-box-shadow: 4px 7px 0px -3px #C7FDD0;
+  -moz-box-shadow: 4px 7px 0px -3px #C7FDD0;
+  transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+  .shadow-solid-green:hover {
+    box-shadow: 4px 7px 0px -3px #c7fdd000;
+  -webkit-box-shadow: 4px 7px 0px -3px #c7fdd000;;
+  -moz-box-shadow: 4px 7px 0px -3px #c7fdd000;;
+  }
+
+  .custom-box-shadow {
+    box-shadow: 6.29167px 6.29167px 0px 0px #000;
+  }
+
+  @media (max-width: 767px) {
+    .carrouselButtoms {
+      justify-content: space-between;
+    }
+  }
+
+
+
+

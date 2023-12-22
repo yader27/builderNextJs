@@ -1,0 +1,32 @@
+# RIDIVI
+
+version: "3.2"
+
+services:
+  
+  ## YES PAGE WEB  ##
+  yes-page-web-nextjs:
+    container_name: yes_page_web_nextjs_container  
+    image: "yes_page_web_next_image"
+    environment:        
+      - NEXT_PUBLIC_BUILDER_API_KEY=e9646335404e44c29ee8548a90521792
+      - PG_USER=postgres
+      - PG_PASSWORD=pzD8XueeV59uHRa8SCW
+      - PG_HOST=10.8.0.1
+      - PG_PORT=5432
+      - PG_DATABASE=yes_investments
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+    ports:
+      - 8183:3000
+    networks:
+    - yes-net-test
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5' # Limita el contenedor a utilizar como máximo el 50% de un CPU
+          memory: 512M # Limita el contenedor a 512 MB de memoria RAM
+  
+networks:
+  yes-net-test:
+    driver: bridge

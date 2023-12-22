@@ -1,0 +1,5 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Esto hace que el contenedor ocupe al menos el 100% del alto de la ventana */
+  }

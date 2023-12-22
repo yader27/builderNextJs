@@ -6,6 +6,9 @@ import Head from "next/head";
 import { BuilderContent } from "@builder.io/sdk";
 import { GetStaticProps } from "next";
 import "../builder-registry";
+import { SimpleLayout } from "@/layout";
+import styles from "@/styles/page.module.css";
+import ErrorPage from "./errorPage";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -58,18 +61,18 @@ export default function Page({ page }: { page: BuilderContent | null }) {
   // If the page content is not available
   // and not in preview mode, show a 404 error page
   if (!page && !isPreviewing) {
-    return <DefaultErrorPage statusCode={404} />;
+    return <ErrorPage></ErrorPage>;
   }
 
   // If the page content is available, render
   // the BuilderComponent with the page content
   return (
-    <>
-      <Head>
-        <title>{page?.data?.title}</title>
-      </Head>
+    <div className={styles.pageContainer}>
+     <SimpleLayout title={page?.data?.title} pageDescription={""}>
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page || undefined} />
-    </>
+    </SimpleLayout>
+    </div>
+   
   );
 }
